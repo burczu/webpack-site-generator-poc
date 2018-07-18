@@ -11,7 +11,7 @@ const Html = (props) => {
         <div id="app">
           {props.children}
         </div>
-        {scripts.map((item, index) => <script key={index} src={`http://localhost:8000/${item}`}></script>)}
+        {scripts.map((item, index) => <script key={index} src={`http://localhost:8080/${item}`}></script>)}
       </body>
     </html>
   );

@@ -5,6 +5,7 @@ import { StaticRouter, BrowserRouter, Route, Link } from 'react-router-dom';
 import Html from './Html';
 import App from './App';
 import About from './About';
+import Products from './Products';
 
 const routes = (
   <div>
@@ -15,13 +16,16 @@ const routes = (
       <li>
         <Link to="/about">About</Link>
       </li>
+      <li>
+        <Link to="/products/1">Product no. 1</Link>
+      </li>
     </ul>
 
     <Route exact path="/" component={App} />
     <Route exact path="/about" component={About} />
+    <Route exact path="/products/:id" component={Products} />
   </div>
 );
-
 
 export default locals =>
   ReactDOMServer.renderToString(
